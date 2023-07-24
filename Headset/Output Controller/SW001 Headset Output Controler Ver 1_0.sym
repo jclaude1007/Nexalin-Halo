@@ -70,7 +70,7 @@ Project Directory:
     C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\
 
 Project Files:
-    SW001 Headset Output Controler Ver 1_0.c                [24-Jul-23 13:47  CRC=CCAE6370]
+    SW001 Headset Output Controler Ver 1_0.c                [24-Jul-23 13:16  CRC=A1FDA861]
     SW001 Headset Output Controler Ver 1_0.h                [11-Dec-22 17:08  CRC=6F516549]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\24HJ64GP202.h [11-Jan-22 13:37  CRC=C191A359]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [30-Jun-20 13:21  CRC=452E14BB]
@@ -80,9 +80,9 @@ Project Files:
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [13-May-20 08:33  CRC=4FD89CC0]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h [31-Jul-07 14:24  CRC=4E4534F4]
 
-Source signature=971ECBA7
+Source signature=6C6E1098
 Program memory checksum=0000
-Hex file CRC=9506
+Hex file CRC=9851
 
 Units:
     C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\SW001 Headset Output Controler Ver 1_0 (main)
