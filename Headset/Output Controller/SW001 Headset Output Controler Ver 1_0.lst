@@ -1,4 +1,4 @@
-CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:43
+CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:51
 
                Filename:   C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\SW001 Headset Output Controler Ver 1_0.lst
 
@@ -3145,6 +3145,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:43
 .................... static  uint8_t    g_Phase = HIGH;
 .................... 
 .................... //test
+.................... //test2
 .................... 
 .................... 
 .................... void main()
