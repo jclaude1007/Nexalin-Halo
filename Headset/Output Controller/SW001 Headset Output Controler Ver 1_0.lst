@@ -1,9 +1,9 @@
-CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
+CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:47
 
                Filename:   C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\SW001 Headset Output Controler Ver 1_0.lst
 
-               ROM used:   1204 bytes (3%)
-                           Largest free fragment is 42828
+               ROM used:   1212 bytes (3%)
+                           Largest free fragment is 42820
                RAM used:   137 (2%) at main() level
                            137 (2%) worst case
                Stack used: 2 locations
@@ -75,7 +75,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
 022E:  DATA    20,50,6F
 0230:  DATA    49,43,6C
 0232:  DATA    32,34,6C
-0234:  DATA    48,4A,61
+0234:  DATA    48,4A,65
 0236:  DATA    36,34,72
 0238:  DATA    47,50,00
 .................... 
@@ -3198,7 +3198,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
 029E:  MOV     #A,W0
 02A0:  CALL    23A
 ....................     
-....................     fprintf(DEBUG,"\n\r Nexalin Headset PIC24HJ64GP202 Controllar");
+....................     fprintf(DEBUG,"\n\r Nexalin Headset PIC24HJ64GP202 Controller");
 02A4:  MOV     #0,W1
 02A6:  MOV     W1,W0
 02A8:  CLR.B   1
@@ -3210,6 +3210,11 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
 02B6:  MOV     #2B,W0
 02B8:  CPSGT   W1,W0
 02BA:  BRA     2A6
+....................     fprintf(DEBUG," ");
+02BC:  BTSC.B  223.1
+02BE:  BRA     2BC
+02C0:  MOV     #20,W4
+02C2:  MOV     W4,224
 .................... 
 ....................    
 ....................     
@@ -3217,441 +3222,441 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
 ....................     {
 ....................         //generate in-line coding of DAC control to attain 100KHz clock at 25% duty cycle
 ....................        switch(g_Phase)
-02BC:  MOV.B   806,W0L
-02BE:  CLR.B   1
-02C0:  XOR     #1,W0
-02C2:  BRA     Z,2CA
-02C4:  XOR     #1,W0
-02C6:  BRA     Z,3C6
-02C8:  BRA     4B0
+02C4:  MOV.B   806,W0L
+02C6:  CLR.B   1
+02C8:  XOR     #1,W0
+02CA:  BRA     Z,2D2
+02CC:  XOR     #1,W0
+02CE:  BRA     Z,3CE
+02D0:  BRA     4B8
 ....................        {
 ....................             case HIGH:  //waveform is bewteen 255 and 0
 ....................                  output_high(SYNC);  //start window for Main Controller to sample VI 
-02CA:  BCLR.B  2C9.3
-02CC:  BSET.B  2CD.3
+02D2:  BCLR.B  2C9.3
+02D4:  BSET.B  2CD.3
 ....................                  
 ....................                 //Set DAC out = 255               
 ....................                 output_high(SYNC);  //start window for Main Controller to sample VI 
-02CE:  BCLR.B  2C9.3
-02D0:  BSET.B  2CD.3
+02D6:  BCLR.B  2C9.3
+02D8:  BSET.B  2CD.3
 ....................                 output_low(CS);  //take DAC CS low
-02D2:  BCLR.B  2C0.4
-02D4:  BCLR.B  2C4.4
+02DA:  BCLR.B  2C0.4
+02DC:  BCLR.B  2C4.4
 ....................                 
 ....................                 output_high(MOSI);   //rest of bits wil be 0  //all bits will be high starting with MSB
-02D6:  BCLR.B  2C8.7
-02D8:  BSET.B  2CC.7
+02DE:  BCLR.B  2C8.7
+02E0:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 1
-02DA:  BCLR.B  2C8.5
-02DC:  BSET.B  2CC.5
+02E2:  BCLR.B  2C8.5
+02E4:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-02DE:  BCLR.B  2C8.5
-02E0:  BCLR.B  2CC.5
+02E6:  BCLR.B  2C8.5
+02E8:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);
-02E2:  BCLR.B  2C8.7
-02E4:  BSET.B  2CC.7
+02EA:  BCLR.B  2C8.7
+02EC:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 2
-02E6:  BCLR.B  2C8.5
-02E8:  BSET.B  2CC.5
+02EE:  BCLR.B  2C8.5
+02F0:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-02EA:  BCLR.B  2C8.5
-02EC:  BCLR.B  2CC.5
+02F2:  BCLR.B  2C8.5
+02F4:  BCLR.B  2CC.5
 ....................              
 ....................                 output_high(MOSI);
-02EE:  BCLR.B  2C8.7
-02F0:  BSET.B  2CC.7
+02F6:  BCLR.B  2C8.7
+02F8:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 3
-02F2:  BCLR.B  2C8.5
-02F4:  BSET.B  2CC.5
+02FA:  BCLR.B  2C8.5
+02FC:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-02F6:  BCLR.B  2C8.5
-02F8:  BCLR.B  2CC.5
+02FE:  BCLR.B  2C8.5
+0300:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);
-02FA:  BCLR.B  2C8.7
-02FC:  BSET.B  2CC.7
+0302:  BCLR.B  2C8.7
+0304:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 4
-02FE:  BCLR.B  2C8.5
-0300:  BSET.B  2CC.5
+0306:  BCLR.B  2C8.5
+0308:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                            
-0302:  BCLR.B  2C8.5
-0304:  BCLR.B  2CC.5
+030A:  BCLR.B  2C8.5
+030C:  BCLR.B  2CC.5
 ....................                 
 ....................                 output_high(MOSI);
-0306:  BCLR.B  2C8.7
-0308:  BSET.B  2CC.7
+030E:  BCLR.B  2C8.7
+0310:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 5
-030A:  BCLR.B  2C8.5
-030C:  BSET.B  2CC.5
+0312:  BCLR.B  2C8.5
+0314:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-030E:  BCLR.B  2C8.5
-0310:  BCLR.B  2CC.5
+0316:  BCLR.B  2C8.5
+0318:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);
-0312:  BCLR.B  2C8.7
-0314:  BSET.B  2CC.7
+031A:  BCLR.B  2C8.7
+031C:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 6
-0316:  BCLR.B  2C8.5
-0318:  BSET.B  2CC.5
+031E:  BCLR.B  2C8.5
+0320:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-031A:  BCLR.B  2C8.5
-031C:  BCLR.B  2CC.5
+0322:  BCLR.B  2C8.5
+0324:  BCLR.B  2CC.5
 ....................              
 ....................                 output_high(MOSI);
-031E:  BCLR.B  2C8.7
-0320:  BSET.B  2CC.7
+0326:  BCLR.B  2C8.7
+0328:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 7
-0322:  BCLR.B  2C8.5
-0324:  BSET.B  2CC.5
+032A:  BCLR.B  2C8.5
+032C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-0326:  BCLR.B  2C8.5
-0328:  BCLR.B  2CC.5
+032E:  BCLR.B  2C8.5
+0330:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);
-032A:  BCLR.B  2C8.7
-032C:  BSET.B  2CC.7
+0332:  BCLR.B  2C8.7
+0334:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 8
-032E:  BCLR.B  2C8.5
-0330:  BSET.B  2CC.5
+0336:  BCLR.B  2C8.5
+0338:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                 
-0332:  BCLR.B  2C8.5
-0334:  BCLR.B  2CC.5
+033A:  BCLR.B  2C8.5
+033C:  BCLR.B  2CC.5
 ....................                 
 ....................                 output_high(CS);  //latch in DAC
-0336:  BCLR.B  2C0.4
-0338:  BSET.B  2C4.4
+033E:  BCLR.B  2C0.4
+0340:  BSET.B  2C4.4
 ....................                 delay_cycles(DLAY);
-033A:  REPEAT  #30
-033C:  NOP     
+0342:  REPEAT  #30
+0344:  NOP     
 ....................  
 ....................                 //now set DAC output to 0
 ....................                 output_low(CS);  //take DAC CS low
-033E:  BCLR.B  2C0.4
-0340:  BCLR.B  2C4.4
+0346:  BCLR.B  2C0.4
+0348:  BCLR.B  2C4.4
 ....................                 
 ....................                 output_low(MOSI);  //all bits will be low starting with MSB
-0342:  BCLR.B  2C8.7
-0344:  BCLR.B  2CC.7
+034A:  BCLR.B  2C8.7
+034C:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 1
-0346:  BCLR.B  2C8.5
-0348:  BSET.B  2CC.5
+034E:  BCLR.B  2C8.5
+0350:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-034A:  BCLR.B  2C8.5
-034C:  BCLR.B  2CC.5
+0352:  BCLR.B  2C8.5
+0354:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-034E:  BCLR.B  2C8.7
-0350:  BCLR.B  2CC.7
+0356:  BCLR.B  2C8.7
+0358:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 2
-0352:  BCLR.B  2C8.5
-0354:  BSET.B  2CC.5
+035A:  BCLR.B  2C8.5
+035C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-0356:  BCLR.B  2C8.5
-0358:  BCLR.B  2CC.5
+035E:  BCLR.B  2C8.5
+0360:  BCLR.B  2CC.5
 ....................              
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-035A:  BCLR.B  2C8.7
-035C:  BCLR.B  2CC.7
+0362:  BCLR.B  2C8.7
+0364:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 3
-035E:  BCLR.B  2C8.5
-0360:  BSET.B  2CC.5
+0366:  BCLR.B  2C8.5
+0368:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-0362:  BCLR.B  2C8.5
-0364:  BCLR.B  2CC.5
+036A:  BCLR.B  2C8.5
+036C:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-0366:  BCLR.B  2C8.7
-0368:  BCLR.B  2CC.7
+036E:  BCLR.B  2C8.7
+0370:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 4
-036A:  BCLR.B  2C8.5
-036C:  BSET.B  2CC.5
+0372:  BCLR.B  2C8.5
+0374:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                            
-036E:  BCLR.B  2C8.5
-0370:  BCLR.B  2CC.5
+0376:  BCLR.B  2C8.5
+0378:  BCLR.B  2CC.5
 ....................                 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-0372:  BCLR.B  2C8.7
-0374:  BCLR.B  2CC.7
+037A:  BCLR.B  2C8.7
+037C:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 5
-0376:  BCLR.B  2C8.5
-0378:  BSET.B  2CC.5
+037E:  BCLR.B  2C8.5
+0380:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-037A:  BCLR.B  2C8.5
-037C:  BCLR.B  2CC.5
+0382:  BCLR.B  2C8.5
+0384:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-037E:  BCLR.B  2C8.7
-0380:  BCLR.B  2CC.7
+0386:  BCLR.B  2C8.7
+0388:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 6
-0382:  BCLR.B  2C8.5
-0384:  BSET.B  2CC.5
+038A:  BCLR.B  2C8.5
+038C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-0386:  BCLR.B  2C8.5
-0388:  BCLR.B  2CC.5
+038E:  BCLR.B  2C8.5
+0390:  BCLR.B  2CC.5
 ....................              
 ....................                 output_high(SH);
-038A:  BCLR.B  2C9.2
-038C:  BSET.B  2CD.2
+0392:  BCLR.B  2C9.2
+0394:  BSET.B  2CD.2
 ....................                
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-038E:  BCLR.B  2C8.7
-0390:  BCLR.B  2CC.7
+0396:  BCLR.B  2C8.7
+0398:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 7
-0392:  BCLR.B  2C8.5
-0394:  BSET.B  2CC.5
+039A:  BCLR.B  2C8.5
+039C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-0396:  BCLR.B  2C8.5
-0398:  BCLR.B  2CC.5
+039E:  BCLR.B  2C8.5
+03A0:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-039A:  BCLR.B  2C8.7
-039C:  BCLR.B  2CC.7
+03A2:  BCLR.B  2C8.7
+03A4:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 8
-039E:  BCLR.B  2C8.5
-03A0:  BSET.B  2CC.5
+03A6:  BCLR.B  2C8.5
+03A8:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                 
-03A2:  BCLR.B  2C8.5
-03A4:  BCLR.B  2CC.5
+03AA:  BCLR.B  2C8.5
+03AC:  BCLR.B  2CC.5
 ....................                  
 ....................                 output_low(SH);
-03A6:  BCLR.B  2C9.2
-03A8:  BCLR.B  2CD.2
+03AE:  BCLR.B  2C9.2
+03B0:  BCLR.B  2CD.2
 ....................                 output_high(CS);  //latch in DAC
-03AA:  BCLR.B  2C0.4
-03AC:  BSET.B  2C4.4
+03B2:  BCLR.B  2C0.4
+03B4:  BSET.B  2C4.4
 ....................                                
 ....................                 Phase_Count++;
-03AE:  INC     0808
+03B6:  INC     0808
 ....................                 if(Phase_Count >=322l)
-03B0:  MOV     808,W4
-03B2:  MOV     #142,W3
-03B4:  CP      W3,W4
-03B6:  BRA     GTU,3C0
+03B8:  MOV     808,W4
+03BA:  MOV     #142,W3
+03BC:  CP      W3,W4
+03BE:  BRA     GTU,3C8
 ....................                 {
 ....................                     Phase_Count = 0;
-03B8:  CLR     808
+03C0:  CLR     808
 ....................                     g_Phase = LOW;
-03BA:  CLR.B   806
+03C2:  CLR.B   806
 ....................                     output_low(SYNC);  //close window for Main Controller to sample VI 
-03BC:  BCLR.B  2C9.3
-03BE:  BCLR.B  2CD.3
+03C4:  BCLR.B  2C9.3
+03C6:  BCLR.B  2CD.3
 ....................                 }
 ....................                 delay_cycles(LONG_DLAY);
-03C0:  REPEAT  #DA
-03C2:  NOP     
+03C8:  REPEAT  #DA
+03CA:  NOP     
 ....................                 
 ....................                 break;
-03C4:  BRA     4B0
+03CC:  BRA     4B8
 ....................                 
 ....................             case LOW:  //waveform is bewteen  127 and 
 ....................                 //DAC out = 127
 ....................                 output_low(CS);  //take DAC CS low
-03C6:  BCLR.B  2C0.4
-03C8:  BCLR.B  2C4.4
+03CE:  BCLR.B  2C0.4
+03D0:  BCLR.B  2C4.4
 .................... 
 ....................                 output_high(MOSI);  //Only MSB = 1
-03CA:  BCLR.B  2C8.7
-03CC:  BSET.B  2CC.7
+03D2:  BCLR.B  2C8.7
+03D4:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 1
-03CE:  BCLR.B  2C8.5
-03D0:  BSET.B  2CC.5
+03D6:  BCLR.B  2C8.5
+03D8:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-03D2:  BCLR.B  2C8.5
-03D4:  BCLR.B  2CC.5
-....................                 
-....................                 output_low(MOSI);   //rest of bits wil be 0
-03D6:  BCLR.B  2C8.7
-03D8:  BCLR.B  2CC.7
-....................                 output_high(SCLK);  // clock 2
 03DA:  BCLR.B  2C8.5
-03DC:  BSET.B  2CC.5
-....................                 output_low(SCLK);               
-03DE:  BCLR.B  2C8.5
-03E0:  BCLR.B  2CC.5
-.................... 
-....................                 output_low(MOSI);   //rest of bits wil be 0
-03E2:  BCLR.B  2C8.7
-03E4:  BCLR.B  2CC.7
-....................                 output_high(SCLK);  // clock 3
-03E6:  BCLR.B  2C8.5
-03E8:  BSET.B  2CC.5
-....................                 output_low(SCLK);
-03EA:  BCLR.B  2C8.5
-03EC:  BCLR.B  2CC.5
-.................... 
-....................                 output_low(MOSI);   //rest of bits wil be 0
-03EE:  BCLR.B  2C8.7
-03F0:  BCLR.B  2CC.7
-....................                 output_high(SCLK);  // clock 4
-03F2:  BCLR.B  2C8.5
-03F4:  BSET.B  2CC.5
-....................                 output_low(SCLK);                            
-03F6:  BCLR.B  2C8.5
-03F8:  BCLR.B  2CC.5
+03DC:  BCLR.B  2CC.5
 ....................                 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-03FA:  BCLR.B  2C8.7
-03FC:  BCLR.B  2CC.7
-....................                 output_high(SCLK);  // clock 5
-03FE:  BCLR.B  2C8.5
-0400:  BSET.B  2CC.5
-....................                 output_low(SCLK);
-0402:  BCLR.B  2C8.5
-0404:  BCLR.B  2CC.5
+03DE:  BCLR.B  2C8.7
+03E0:  BCLR.B  2CC.7
+....................                 output_high(SCLK);  // clock 2
+03E2:  BCLR.B  2C8.5
+03E4:  BSET.B  2CC.5
+....................                 output_low(SCLK);               
+03E6:  BCLR.B  2C8.5
+03E8:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-0406:  BCLR.B  2C8.7
-0408:  BCLR.B  2CC.7
-....................                 output_high(SCLK);  // clock 6
+03EA:  BCLR.B  2C8.7
+03EC:  BCLR.B  2CC.7
+....................                 output_high(SCLK);  // clock 3
+03EE:  BCLR.B  2C8.5
+03F0:  BSET.B  2CC.5
+....................                 output_low(SCLK);
+03F2:  BCLR.B  2C8.5
+03F4:  BCLR.B  2CC.5
+.................... 
+....................                 output_low(MOSI);   //rest of bits wil be 0
+03F6:  BCLR.B  2C8.7
+03F8:  BCLR.B  2CC.7
+....................                 output_high(SCLK);  // clock 4
+03FA:  BCLR.B  2C8.5
+03FC:  BSET.B  2CC.5
+....................                 output_low(SCLK);                            
+03FE:  BCLR.B  2C8.5
+0400:  BCLR.B  2CC.5
+....................                 
+....................                 output_low(MOSI);   //rest of bits wil be 0
+0402:  BCLR.B  2C8.7
+0404:  BCLR.B  2CC.7
+....................                 output_high(SCLK);  // clock 5
+0406:  BCLR.B  2C8.5
+0408:  BSET.B  2CC.5
+....................                 output_low(SCLK);
 040A:  BCLR.B  2C8.5
-040C:  BSET.B  2CC.5
+040C:  BCLR.B  2CC.5
+.................... 
+....................                 output_low(MOSI);   //rest of bits wil be 0
+040E:  BCLR.B  2C8.7
+0410:  BCLR.B  2CC.7
+....................                 output_high(SCLK);  // clock 6
+0412:  BCLR.B  2C8.5
+0414:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-040E:  BCLR.B  2C8.5
-0410:  BCLR.B  2CC.5
+0416:  BCLR.B  2C8.5
+0418:  BCLR.B  2CC.5
 ....................              
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-0412:  BCLR.B  2C8.7
-0414:  BCLR.B  2CC.7
+041A:  BCLR.B  2C8.7
+041C:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 7
-0416:  BCLR.B  2C8.5
-0418:  BSET.B  2CC.5
+041E:  BCLR.B  2C8.5
+0420:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-041A:  BCLR.B  2C8.5
-041C:  BCLR.B  2CC.5
+0422:  BCLR.B  2C8.5
+0424:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);   //rest of bits wil be 0
-041E:  BCLR.B  2C8.7
-0420:  BCLR.B  2CC.7
+0426:  BCLR.B  2C8.7
+0428:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 8
-0422:  BCLR.B  2C8.5
-0424:  BSET.B  2CC.5
+042A:  BCLR.B  2C8.5
+042C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                 
-0426:  BCLR.B  2C8.5
-0428:  BCLR.B  2CC.5
+042E:  BCLR.B  2C8.5
+0430:  BCLR.B  2CC.5
 ....................                 
 ....................                 output_high(CS);  //latch in DAC
-042A:  BCLR.B  2C0.4
-042C:  BSET.B  2C4.4
+0432:  BCLR.B  2C0.4
+0434:  BSET.B  2C4.4
 ....................                 delay_cycles(DLAY);
-042E:  REPEAT  #30
-0430:  NOP     
+0436:  REPEAT  #30
+0438:  NOP     
 ....................  
 ....................                 //now set DAC output to 43 (0010 1011)
 ....................                 output_low(CS);  //take DAC CS low
-0432:  BCLR.B  2C0.4
-0434:  BCLR.B  2C4.4
+043A:  BCLR.B  2C0.4
+043C:  BCLR.B  2C4.4
 ....................                 
 ....................                 output_low(MOSI);  //SPI out
-0436:  BCLR.B  2C8.7
-0438:  BCLR.B  2CC.7
+043E:  BCLR.B  2C8.7
+0440:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 1
-043A:  BCLR.B  2C8.5
-043C:  BSET.B  2CC.5
+0442:  BCLR.B  2C8.5
+0444:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-043E:  BCLR.B  2C8.5
-0440:  BCLR.B  2CC.5
+0446:  BCLR.B  2C8.5
+0448:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);  //SPI out
-0442:  BCLR.B  2C8.7
-0444:  BCLR.B  2CC.7
+044A:  BCLR.B  2C8.7
+044C:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 2
-0446:  BCLR.B  2C8.5
-0448:  BSET.B  2CC.5
+044E:  BCLR.B  2C8.5
+0450:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-044A:  BCLR.B  2C8.5
-044C:  BCLR.B  2CC.5
+0452:  BCLR.B  2C8.5
+0454:  BCLR.B  2CC.5
 ....................              
 ....................                 output_high(MOSI);  //SPI out
-044E:  BCLR.B  2C8.7
-0450:  BSET.B  2CC.7
+0456:  BCLR.B  2C8.7
+0458:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 3
-0452:  BCLR.B  2C8.5
-0454:  BSET.B  2CC.5
+045A:  BCLR.B  2C8.5
+045C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-0456:  BCLR.B  2C8.5
-0458:  BCLR.B  2CC.5
+045E:  BCLR.B  2C8.5
+0460:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);  //SPI out
-045A:  BCLR.B  2C8.7
-045C:  BCLR.B  2CC.7
+0462:  BCLR.B  2C8.7
+0464:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 4
-045E:  BCLR.B  2C8.5
-0460:  BSET.B  2CC.5
+0466:  BCLR.B  2C8.5
+0468:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                            
-0462:  BCLR.B  2C8.5
-0464:  BCLR.B  2CC.5
+046A:  BCLR.B  2C8.5
+046C:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);  //SPI out
-0466:  BCLR.B  2C8.7
-0468:  BSET.B  2CC.7
+046E:  BCLR.B  2C8.7
+0470:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 5
-046A:  BCLR.B  2C8.5
-046C:  BSET.B  2CC.5
+0472:  BCLR.B  2C8.5
+0474:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-046E:  BCLR.B  2C8.5
-0470:  BCLR.B  2CC.5
+0476:  BCLR.B  2C8.5
+0478:  BCLR.B  2CC.5
 .................... 
 ....................                 output_low(MOSI);  //SPI out
-0472:  BCLR.B  2C8.7
-0474:  BCLR.B  2CC.7
+047A:  BCLR.B  2C8.7
+047C:  BCLR.B  2CC.7
 ....................                 output_high(SCLK);  // clock 6
-0476:  BCLR.B  2C8.5
-0478:  BSET.B  2CC.5
+047E:  BCLR.B  2C8.5
+0480:  BSET.B  2CC.5
 ....................                 output_low(SCLK);               
-047A:  BCLR.B  2C8.5
-047C:  BCLR.B  2CC.5
+0482:  BCLR.B  2C8.5
+0484:  BCLR.B  2CC.5
 ....................              
 ....................                 output_high(MOSI);  //SPI out              
-047E:  BCLR.B  2C8.7
-0480:  BSET.B  2CC.7
+0486:  BCLR.B  2C8.7
+0488:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 7
-0482:  BCLR.B  2C8.5
-0484:  BSET.B  2CC.5
+048A:  BCLR.B  2C8.5
+048C:  BSET.B  2CC.5
 ....................                 output_low(SCLK);
-0486:  BCLR.B  2C8.5
-0488:  BCLR.B  2CC.5
+048E:  BCLR.B  2C8.5
+0490:  BCLR.B  2CC.5
 .................... 
 ....................                 output_high(MOSI);  //SPI out
-048A:  BCLR.B  2C8.7
-048C:  BSET.B  2CC.7
+0492:  BCLR.B  2C8.7
+0494:  BSET.B  2CC.7
 ....................                 output_high(SCLK);  // clock 8
-048E:  BCLR.B  2C8.5
-0490:  BSET.B  2CC.5
+0496:  BCLR.B  2C8.5
+0498:  BSET.B  2CC.5
 ....................                 output_low(SCLK);                 
-0492:  BCLR.B  2C8.5
-0494:  BCLR.B  2CC.5
+049A:  BCLR.B  2C8.5
+049C:  BCLR.B  2CC.5
 ....................  
 ....................                 output_high(CS);  //latch in DAC
-0496:  BCLR.B  2C0.4
-0498:  BSET.B  2C4.4
+049E:  BCLR.B  2C0.4
+04A0:  BSET.B  2C4.4
 ....................                 
 ....................                 Phase_Count++;
-049A:  INC     0808
+04A2:  INC     0808
 ....................                 if(Phase_Count >=968ll)
-049C:  MOV     808,W4
-049E:  MOV     #3C8,W3
-04A0:  CP      W3,W4
-04A2:  BRA     GTU,4AA
+04A4:  MOV     808,W4
+04A6:  MOV     #3C8,W3
+04A8:  CP      W3,W4
+04AA:  BRA     GTU,4B2
 ....................                 {
 ....................                     Phase_Count = 0;
-04A4:  CLR     808
+04AC:  CLR     808
 ....................                     g_Phase = HIGH;
-04A6:  MOV.B   #1,W0L
-04A8:  MOV.B   W0L,806
+04AE:  MOV.B   #1,W0L
+04B0:  MOV.B   W0L,806
 ....................                 }
 ....................                 delay_cycles(LONG_DLAY);
-04AA:  REPEAT  #DA
-04AC:  NOP     
+04B2:  REPEAT  #DA
+04B4:  NOP     
 ....................                 break;
-04AE:  BRA     4B0
+04B6:  BRA     4B8
 ....................                
 ....................        }
-04B0:  BRA     2BC
+04B8:  BRA     2C4
 ....................                 
 ....................     }
 .................... }
-04B2:  PWRSAV  #0
+04BA:  PWRSAV  #0
 
 Configuration Fuses:
    Word  1L: 00CF   NOWRTB NOBSS NORBS

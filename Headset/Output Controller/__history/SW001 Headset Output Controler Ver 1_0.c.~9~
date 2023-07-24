@@ -62,7 +62,7 @@ void main()
     delay_ms(10);
     
     fprintf(DEBUG,"\n\r Nexalin Headset PIC24HJ64GP202 Controller");
-    fprintf(DEBUG," ");
+    /***   ***/
 
    
     
