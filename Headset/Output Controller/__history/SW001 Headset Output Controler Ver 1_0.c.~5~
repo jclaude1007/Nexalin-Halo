@@ -47,7 +47,7 @@ const   uint8_t    HIGH = 1;
 const   uint8_t    LOW = 0;
 static  uint8_t    g_Phase = HIGH;
 
-//test3
+
 
 void main()
 {
