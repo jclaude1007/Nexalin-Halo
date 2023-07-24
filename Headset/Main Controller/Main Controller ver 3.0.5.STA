@@ -1,0 +1,146 @@
+
+ROM used:   11354/65536 (17%)
+            11354/65536 (17%) including unused fragments
+
+            2.0 Average locations per line
+            13.9 Average locations per statement
+
+RAM used:   606/4095 (15%) at main() level
+            671/4095 (16%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+ 1152   456  56  Main Controller ver 3.0.5.c
+ 2447     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F26K83.h
+ 1354   359  44  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+  195     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
+   37     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
+----- -----
+ 5680   815 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   0    1             @delay_ms1
+0     36   0    1             @delay_us1
+0     14   0    0             @PUTCHARI_BIU_2
+0    120   1    9    280  5.5  strcat
+0    124   1    9    288  6.0  strpbrk
+0    146   1    9    346  7.5  strspn
+0     60   0    5    129  4.6  strlen
+0    184   1   10    496  8.2  strtok
+0     80   0    2             @MUL88
+0    252   1   11             @MULFF
+0     54   0    2             @ITOF
+0    632   3   16             @ADDFF
+0    352   2   14             @DIVFF
+0    416   2    9   1815 10.5  atoi
+0     70   0    5             @DIV1616
+0     40   0    5             @MUL1616
+0     76   0    0    275  3.5  Update_LEDs
+0     12   0    0             @const1497
+0     54   0    3             @PSTRINGCN_115200_130662_130663
+0     44   0    3             @DIV88
+0    140   1    2             @PRINTF_U_115200_130662_130663
+0     58   0    0    149  1.7  Reboot_BT
+0     12   0    0             @const1507
+0     48   0    2             @PSTRINGC_115200_130662_130663
+0     68   0    0    381  3.4  Get_BTState
+0     90   0   34    209  3.3  SendString_2_BT
+0     52   0    2             @PSTRINGR_115200_130652_130651
+0     96   0    1    284  2.3  CMD_Mode
+0     18   0    0             @const1524
+0      4   0    0             @const1525
+0    296   1   22    382  2.8  Configure_BT
+0     22   0    0             @const1527
+0     22   0    0             @const1528
+0     22   0    0             @const1529
+0     24   0    0             @const1530
+0     22   0    0             @const1531
+0     32   0    0             @const1532
+0     20   0    0             @const1533
+0     18   0    0             @const1534
+0     98   0    0    367  5.5  State_Machine
+0    204   1    0    439  3.2  Go_To_Sleep
+0    190   1    9             @PRINTF_LU_115200_130662_130663
+0     10   0    0             @const1540
+0     38   0    0    136  1.8  Init_Globals
+0     52   0    1    165  1.8  Init_IO
+0    348   2    1    731  3.9  Self_Test
+0     14   0    0             @const1543
+0     24   0    0             @const1544
+0     28   0    0             @const1545
+0     20   0    0             @const1546
+0     68   0    5             @FTOSD
+0    156   1   13             @DIV3232
+0    440   2   13             @PRINTF_L32D_115200_130662_130663FPFPF
+0     20   0    0             @const1555
+0     24   0    0             @const1556
+0     18   0    0             @const1557
+0     26   0    0     47  1.5  TIMER1_isr
+0     98   0    3    608  8.1  RDA2_isr
+0     98   0    0    429  5.8  Clocks
+0    720   3    8   1402  7.9  Update_Stim_VI
+0     60   0    4             @SFTOI
+0    122   1   10             @FLT
+0    294   1    4    265  2.5  Update_BatteryVI
+0    348   2    9    640  7.5  PID
+0    750   3    2   2736 12.9  Charge_Battery
+0     14   0    0             @const1593
+0     34   0    0             @const1594
+0   1678   7   12   3520  8.9  Process_Command
+0     18   0    0             @const1599
+0      4   0    0             @const1600
+0     48   0    2             @PSTRINGC_115200_130652_130651
+0      8   0    0             @const1602
+0     54   0    3             @PSTRINGCN_115200_130652_130651
+0      8   0    0             @const1605
+0     52   0    2             @PSTRINGR_115200_130662_130663
+0      4   0    0             @const1611
+0      8   0    0             @const1612
+0    144   1    2             @PRINTF_U_115200_130652_130651
+0    190   1    9             @PRINTF_LU_115200_130652_130651
+0      8   0    0             @const1622
+0      4   0    0             @const1627
+0      8   0    0             @const1628
+0      8   0    0             @const1633
+0      4   0    0             @const1638
+0      8   0    0             @const1639
+0      8   0    0             @const1644
+0     24   0    0             @const1649
+0     68   0    1             @STRFINDINLIST
+0     62   0    0    254  4.1  Check_Charger
+0     10   0    0             @const1655
+0     50   0    1    225  3.9  Check_Button
+0     10   0    0             @const1659
+0     50   0    0    404  2.4  ClearPorts
+0    482   2    1   1145  5.8  MAIN
+0     42   0    0             @const1664
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               29
+    Statements              815
+    Comments                1610
+    Volume (V)              31575
+    Difficulty (D)          140.5
+    Effort to implement (E) 4436662
+    Time to implement (T)   68 hours, 28 minutes
+    Est Delivered Bugs (B)  9
+    Cyclomatic Complexity   95
+    Maintainability (MI)    37
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-0006C   102  0  
+0006E-0FFFE  11248  54178  
+
+
+

@@ -1,0 +1,54 @@
+
+ROM used:   1204/44032 (3%)
+            1204/44032 (3%) including unused fragments
+
+            0.4 Average locations per line
+            1.8 Average locations per statement
+
+RAM used:   137/8192 (2%) at main() level
+            137/8192 (2%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 128
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  254   130  20  SW001 Headset Output Controler Ver 1_0.c
+   13     0   0  SW001 Headset Output Controler Ver 1_0.h
+ 1054     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\24HJ64GP202.h
+ 1354   524  80  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+  195     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
+   37     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
+----- -----
+ 3402   654 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     24   1    0             @delay_ms1
+0    610  25    0   4194  6.4  MAIN
+0     58   2    0             @const1310
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              654
+    Comments                1089
+    Volume (V)              4203
+    Difficulty (D)          6.3
+    Effort to implement (E) 26682
+    Time to implement (T)   25 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   4
+    Maintainability (MI)    59
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-001FE   508  0  
+00200-0ABFE   692  42828  
+
+
+

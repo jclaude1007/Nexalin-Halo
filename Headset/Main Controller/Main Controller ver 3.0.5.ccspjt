@@ -1,0 +1,41 @@
+[PROJECT]
+Target=Main Controller ver 3.0.5.hex
+Processor_Text=PIC18F26K83
+CCSVersion=5.107
+Compiler=PCH
+[Target Data]
+FileList=Main Controller ver 3.0.5.c
+[Main Controller ver 3.0.5.c]
+Type=4
+[mru-list]
+1=Main Controller ver 3.0.5.c
+
+[defines]
+buildcount=32
+
+[Opened Files]
+1=Main Controller ver 3.0.5.c
+t1=1
+2=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F26K83.h
+t2=1
+3=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+t3=1
+4=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+t4=1
+5=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+t5=1
+6=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+t6=1
+7=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
+t7=1
+8=..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
+t8=1
+Count=8
+9=Compare
+t9=-1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Main Controller ver 3.0.5 (main)

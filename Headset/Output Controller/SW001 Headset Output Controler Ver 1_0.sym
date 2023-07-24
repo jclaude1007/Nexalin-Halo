@@ -1,0 +1,109 @@
+W0      @SCRATCH
+W0L     _RETURN_
+W0 -W1  @READ_ROM_MEMORY.P1
+W0 -W3  @MULS6464.P2
+W0 -W3  @ADDFF64.P3
+W0 -W3  @MULFF64.P4
+W0 -W1  @DIV3232B.P5
+W0 -W3  @DIVS6464.P6
+W0 -W3  @SI64TOF64.P7
+W0 -W1  @MULS3232.P8
+W0      @delay_ms1.P9
+W0      @delay_us1.P10
+W0 -W1  @MUL3232.P11
+W0 -W2  @ADDFF48.P12
+W0 -W1  @ADDFF.P13
+W0 -W3  @SI64TOF48.P14
+W0 -W1  @DIVFF.P15
+W0 -W1  @MULFF.P16
+W0 -W3  @DIVFF64.P17
+W0 -W2  @DIVS4848.P18
+W0      @SITOF.P19
+W0 -W2  @MULFF48.P20
+W0 -W2  @DIVFF48.P21
+W0 -W1  @DIVS3232A.P22
+W0 -W2  @MULS4848.P23
+W1      @SCRATCH
+W1      @WRITE_PACKED_MEMORY.P1
+W1      @READ_PACKED_MEMORY.P2
+W2 -W3  @DIVFF.P1
+W2 -W3  @ADDFF.P2
+W2      @READ_ROM_MEMORY.P3
+W2      @WRITE_PACKED_MEMORY.P4
+W2 -W3  @DIV3232B.P5
+W2 -W3  @MULFF.P6
+W2 -W3  @MULS3232.P7
+W2 -W3  @MUL3232.P8
+W2 -W3  @DIVS3232A.P9
+W2      @READ_PACKED_MEMORY.P10
+W3      @WRITE_PACKED_MEMORY.P1
+W3 -W5  @MULS4848.P2
+W3      @READ_PACKED_MEMORY.P3
+W3 -W5  @DIVS4848.P4
+W3 -W5  @DIVFF48.P5
+W3 -W5  @MULFF48.P6
+W3      @READ_ROM_MEMORY.P7
+W3 -W5  @ADDFF48.P8
+W4 -W7  @DIVFF64.P1
+W4 -W7  @DIVS6464.P2
+W4 -W7  @ADDFF64.P3
+W4 -W7  @MULS6464.P4
+W4 -W7  @MULFF64.P5
+630.6   C1OUT
+630.7   C2OUT
+800-801 strtok.save
+802-805 _Randseed
+806     g_Phase
+808-809 MAIN.PHase_Count
+1F80-1FFF _STACK_
+
+ROM Allocation:
+000200  @const1310.call
+00023A  @delay_ms1
+000252  @cinit1
+000252  MAIN
+000296  @cinit2
+0135  StrtoulGO
+0135  StrtolGO
+
+Project Directory:
+    C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\
+
+Project Files:
+    SW001 Headset Output Controler Ver 1_0.c                [20-Mar-23 17:23  CRC=BF01943E]
+    SW001 Headset Output Controler Ver 1_0.h                [11-Dec-22 17:08  CRC=6F516549]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\24HJ64GP202.h [11-Jan-22 13:37  CRC=C191A359]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [30-Jun-20 13:21  CRC=452E14BB]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-Jan-19 11:26  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [06-Apr-20 07:43  CRC=B1605627]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 14:55  CRC=2D1F019F]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [13-May-20 08:33  CRC=4FD89CC0]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h [31-Jul-07 14:24  CRC=4E4534F4]
+
+Source signature=8971FC75
+Program memory checksum=0000
+Hex file CRC=5425
+
+Units:
+    C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\SW001 Headset Output Controler Ver 1_0 (main)
+
+Compiler Settings:
+    Processor:      PIC24HJ64GP202
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: SIGNED: 8,16,32
+    Float,Double:   32,64
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   SW001 Headset Output Controler Ver 1_0.xsym
+    Errors:      SW001 Headset Output Controler Ver 1_0.err
+    Ext Symbols: SW001 Headset Output Controler Ver 1_0.esym
+    INHX8:       SW001 Headset Output Controler Ver 1_0.hex
+    Symbols:     SW001 Headset Output Controler Ver 1_0.sym
+    List:        SW001 Headset Output Controler Ver 1_0.lst
+    Debug/COFF:  SW001 Headset Output Controler Ver 1_0.cof
+    Project:     SW001 Headset Output Controler Ver 1_0.ccspjt
+    Call Tree:   SW001 Headset Output Controler Ver 1_0.tre
+    Statistics:  SW001 Headset Output Controler Ver 1_0.STA
