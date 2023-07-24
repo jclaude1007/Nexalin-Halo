@@ -1,4 +1,4 @@
-CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:57
+CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 13:16
 
                Filename:   C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Headset\Output Controller\SW001 Headset Output Controler Ver 1_0.lst
 
@@ -75,7 +75,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:57
 022E:  DATA    20,50,6F
 0230:  DATA    49,43,6C
 0232:  DATA    32,34,6C
-0234:  DATA    48,4A,65
+0234:  DATA    48,4A,61
 0236:  DATA    36,34,72
 0238:  DATA    47,50,00
 .................... 
@@ -3144,7 +3144,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:57
 .................... const   uint8_t    LOW = 0;
 .................... static  uint8_t    g_Phase = HIGH;
 .................... 
-.................... 
+.................... //test3
 .................... 
 .................... void main()
 0252:  MOV     #1F80,W15
@@ -3198,7 +3198,7 @@ CCS PCD C Compiler, Version 5.107, 60694               24-Jul-23 11:57
 029E:  MOV     #A,W0
 02A0:  CALL    23A
 ....................     
-....................     fprintf(DEBUG,"\n\r Nexalin Headset PIC24HJ64GP202 Controller");
+....................     fprintf(DEBUG,"\n\r Nexalin Headset PIC24HJ64GP202 Controllar");
 02A4:  MOV     #0,W1
 02A6:  MOV     W1,W0
 02A8:  CLR.B   1

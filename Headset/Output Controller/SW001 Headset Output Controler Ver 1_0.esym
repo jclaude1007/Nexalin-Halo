@@ -1,9 +1,9 @@
-D G "__PCD__" 0 256 ""5.107""
-D G "__DEVICE__" 0 256 "8206"
-D G "__DATE__" 0 256 ""24-Jul-23""
-D G "__TIME__" 0 256 ""11:57:17""
-D G "_UNICODE" 0 256 ""?""
-D G "__EVAL" 0 256 ""?"" "Title: SW001 Headset Output Controller SW Ver 1_0"
+D G "__PCD__" 0 254 ""5.107""
+D G "__DEVICE__" 0 254 "8206"
+D G "__DATE__" 0 254 ""24-Jul-23""
+D G "__TIME__" 0 254 ""13:16:53""
+D G "_UNICODE" 0 254 ""?""
+D G "__EVAL" 0 254 ""?"" "Title: SW001 Headset Output Controller SW Ver 1_0"
 c L "set_tris_a" 2 1 21 "FUNCTION"
 F N "set_tris_a" 2 63 ""
 V L "value" 2 63 "int16" `55 
@@ -2300,6 +2300,7 @@ V G "LONG_DLAY" 0 45 "uint8_t" `1299
 V G "HIGH" 0 46 "uint8_t" `1301 
 V G "LOW" 0 47 "uint8_t" `1303 
 V G "g_Phase" 0 48 "uint8_t" `1305 
+C L "MAIN" 0 34 1 "FUNCTION"
 F N "MAIN" 0 52 ""
 F G "MAIN" 0 53 "void()" `1306 
 V L "PHase_Count" 0 54 "uint16_t" `1307  "setup_timer1(TMR_INTERNAL | TMR_DIV_BY_256, 16);"
