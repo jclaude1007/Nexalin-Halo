@@ -13,7 +13,7 @@ Stack size: 128
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  254   130  20  SW001 Headset Output Controler Ver 1_0.c
+  256   130  20  SW001 Headset Output Controler Ver 1_0.c
    13     0   0  SW001 Headset Output Controler Ver 1_0.h
  1054     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\24HJ64GP202.h
  1354   524  80  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
@@ -23,7 +23,7 @@ Lines Stmts  %   Files
   195     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
    37     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
 ----- -----
- 3402   654 Total
+ 3404   654 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -35,14 +35,14 @@ Page ROM  %  RAM    Vol Diff  Functions:
 Program metrics:
     Functions               1
     Statements              654
-    Comments                1089
+    Comments                1099
     Volume (V)              4203
     Difficulty (D)          6.3
     Effort to implement (E) 26682
     Time to implement (T)   25 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   4
-    Maintainability (MI)    59
+    Maintainability (MI)    66
 
  Segment     Used  Free
 -----------  ----  ----

@@ -1,9 +1,9 @@
-D G "__PCD__" 0 0 ""5.107""
-D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""24-Jul-23""
-D G "__TIME__" 0 0 ""09:32:37""
-D G "_UNICODE" 0 0 ""?""
-D G "__EVAL" 0 0 ""?"" "Title: SW001 Headset Output Controller SW Ver 1_0"
+D G "__PCD__" 0 256 ""5.107""
+D G "__DEVICE__" 0 256 "8206"
+D G "__DATE__" 0 256 ""24-Jul-23""
+D G "__TIME__" 0 256 ""11:43:55""
+D G "_UNICODE" 0 256 ""?""
+D G "__EVAL" 0 256 ""?"" "Title: SW001 Headset Output Controller SW Ver 1_0"
 c L "set_tris_a" 2 1 21 "FUNCTION"
 F N "set_tris_a" 2 63 ""
 V L "value" 2 63 "int16" `55 
@@ -793,7 +793,7 @@ V L "channel" 2 668 "int8" `387
 V L "mode" 2 668 "int16" `388 
 V L "addressa" 2 668 "int16" `389 
 V L "addressb" 2 668 "int16" `395 
-f G "dma_start" 2 668 "void(int8 channel,int16 mode,int16 addressa,int16 addressb)" `391 
+f G "dma_start" 2 668 "void(int8 channel,int16 mode,int16 addressa,int16 addressb,int16 count)" `391 
 F N "dma_start" 2 669 ""
 V L "channel" 2 669 "int8" `392 
 V L "mode" 2 669 "int16" `393 
@@ -1278,9 +1278,9 @@ F B "i2c_transfer_in" 2 842 "int8(int8 stream,int8 address,*int8 rData,int8 rCou
 F N "spi_xfer" 2 845 ""
 F B "spi_xfer" 2 845 "int8()" `718 
 F N "spi_xfer" 2 846 ""
-f G "spi_xfer" 2 846 "int16()" `719 
+f G "spi_xfer" 2 846 "int16(int8 data)" `719 
 F N "spi_xfer" 2 847 ""
-f G "spi_xfer" 2 847 "int32()" `719 
+f G "spi_xfer" 2 847 "int32(int8 data)" `719 
 F N "spi_xfer" 2 848 ""
 V L "data" 2 848 "int8" `720 
 F B "spi_xfer" 2 848 "int8(int8 data)" `719 
@@ -1360,18 +1360,18 @@ F B "spi_prewrite" 2 867 "void(int8 ,int32 data)" `772
 F N "spi_xfer_in" 2 868 ""
 F B "spi_xfer_in" 2 868 "int8()" `775 
 F N "spi_xfer_in" 2 869 ""
-f G "spi_xfer_in" 2 869 "int16()" `776 
+f G "spi_xfer_in" 2 869 "int16(int8 bits)" `776 
 F N "spi_xfer_in" 2 870 ""
-f G "spi_xfer_in" 2 870 "int32()" `776 
+f G "spi_xfer_in" 2 870 "int32(int8 bits)" `776 
 F N "spi_xfer_in" 2 871 ""
 V L "bits" 2 871 "int8" `777 
 F B "spi_xfer_in" 2 871 "int8(int8 bits)" `776 
 F N "spi_xfer_in" 2 872 ""
 V L "bits" 2 872 "int8" `779 
-f G "spi_xfer_in" 2 872 "int16(int8 bits)" `778 
+f G "spi_xfer_in" 2 872 "int16(int8 bits,int8 bits)" `778 
 F N "spi_xfer_in" 2 873 ""
 V L "bits" 2 873 "int8" `779 
-f G "spi_xfer_in" 2 873 "int32(int8 bits)" `778 
+f G "spi_xfer_in" 2 873 "int32(int8 bits,int8 bits)" `778 
 F N "spi_xfer_in" 2 874 ""
 V L "stream" 2 874 "int8" `779 
 V L "bits" 2 874 "int8" `780 
@@ -1379,11 +1379,11 @@ F B "spi_xfer_in" 2 874 "int8(int8 stream,int8 bits)" `778
 F N "spi_xfer_in" 2 875 ""
 V L "stream" 2 875 "int8" `779 
 V L "bits" 2 875 "int8" `783 
-f G "spi_xfer_in" 2 875 "int16(int8 stream,int8 bits)" `781 
+f G "spi_xfer_in" 2 875 "int16(int8 stream,int8 bits,int16 count)" `781 
 F N "spi_xfer_in" 2 876 ""
 V L "stream" 2 876 "int8" `779 
 V L "bits" 2 876 "int8" `783 
-f G "spi_xfer_in" 2 876 "int32(int8 stream,int8 bits)" `781 
+f G "spi_xfer_in" 2 876 "int32(int8 stream,int8 bits,int16 count)" `781 
 F N "spi_transfer" 2 877 ""
 V L "wData" 2 877 "*int8" `782 
 V L "rData" 2 877 "*int8" `783 
@@ -1462,11 +1462,11 @@ F B "rtos_stats" 2 901 "void(int8 task,*int8 stat)" `830  "#use timer() Prototyp
 F N "get_ticks" 2 904 ""
 F B "get_ticks" 2 904 "int8()" `833 
 F N "get_ticks" 2 905 ""
-f G "get_ticks" 2 905 "int16()" `834 
+f G "get_ticks" 2 905 "int16(int8 stream)" `834 
 F N "get_ticks" 2 906 ""
-f G "get_ticks" 2 906 "int32()" `834 
+f G "get_ticks" 2 906 "int32(int8 stream)" `834 
 F N "get_ticks" 2 907 ""
-f G "get_ticks" 2 907 "?()" `834 
+f G "get_ticks" 2 907 "?(int8 stream)" `834 
 F N "get_ticks" 2 908 ""
 V L "stream" 2 908 "int8" `835 
 F B "get_ticks" 2 908 "int8(int8 stream)" `834 
@@ -2289,94 +2289,95 @@ D G "UINTMAXN_MAX" 7 176 " (18446744073709551615)"
 D G "INTMAX_C" 7 178 "(value) ((signed int64)val)"
 D G "UINTMAX_C" 7 179 "(value) ((unsigned int64)val)"
 D G "_STDIO" 8 12 ""
-D G "SH" 0 35 "PIN_B10" "DO, active low to sample"
-D G "SYNC" 0 36 "PIN_B11" "DO. active high when VI data can be sampled"
-D G "SCLK" 0 37 "PIN_B5" "DO, SPI clock"
-D G "CS" 0 38 "PIN_A4" "DO. active low chip select"
-D G "MOSI" 0 39 "PIN_B7" "DO, MOSI"
-D G "LED" 0 40 "PIN_A2" "DO, active high LED"
-V G "DLAY" 0 43 "uint8_t" `1297 
-V G "LONG_DLAY" 0 44 "uint8_t" `1299 
-V G "HIGH" 0 45 "uint8_t" `1301 
-V G "LOW" 0 46 "uint8_t" `1303 
-V G "g_Phase" 0 47 "uint8_t" `1305 
-F N "MAIN" 0 51 ""
-F G "MAIN" 0 52 "void()" `1306 
-V L "PHase_Count" 0 53 "uint16_t" `1307  "setup_timer1(TMR_INTERNAL | TMR_DIV_BY_256, 16);"
-C L "MAIN" 0 33 4 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 2 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 2 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
-C L "MAIN" 0 33 1 "FUNCTION"
+D G "SH" 0 36 "PIN_B10" "DO, active low to sample"
+D G "SYNC" 0 37 "PIN_B11" "DO. active high when VI data can be sampled"
+D G "SCLK" 0 38 "PIN_B5" "DO, SPI clock"
+D G "CS" 0 39 "PIN_A4" "DO. active low chip select"
+D G "MOSI" 0 40 "PIN_B7" "DO, MOSI"
+D G "LED" 0 41 "PIN_A2" "DO, active high LED"
+V G "DLAY" 0 44 "uint8_t" `1297 
+V G "LONG_DLAY" 0 45 "uint8_t" `1299 
+V G "HIGH" 0 46 "uint8_t" `1301 
+V G "LOW" 0 47 "uint8_t" `1303 
+V G "g_Phase" 0 48 "uint8_t" `1305 
+C L "MAIN" 0 34 1 "FUNCTION"
+F N "MAIN" 0 53 ""
+F G "MAIN" 0 54 "void()" `1306 
+V L "PHase_Count" 0 55 "uint16_t" `1307  "setup_timer1(TMR_INTERNAL | TMR_DIV_BY_256, 16);"
+C L "MAIN" 0 34 4 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 2 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 2 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
+C L "MAIN" 0 34 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

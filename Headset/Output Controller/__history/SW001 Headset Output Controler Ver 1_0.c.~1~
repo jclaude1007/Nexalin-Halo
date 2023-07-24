@@ -16,7 +16,6 @@ Release History
 
 12/12/2022   Intial Release, checksum 1A0D, Build 1_0
 20230320    Change sync logic, 30DF
-7/25/2023    Released to China
 
 **/
 
@@ -47,7 +46,6 @@ const   uint8_t    HIGH = 1;
 const   uint8_t    LOW = 0;
 static  uint8_t    g_Phase = HIGH;
 
-//test
 
 
 void main()

@@ -18,7 +18,7 @@ forcecoff=0
 
 [Opened Files]
 1=SW001 Headset Output Controler Ver 1_0.c
-t1=1
+t1=29
 Count=3
 2=SW001 Headset Output Controler Ver 1_0.h
 t2=1
@@ -32,7 +32,7 @@ t5=1
 t6=-1
 
 [defines]
-buildcount=20
+buildcount=22
 [SW001 Headset Output Controler Ver 1_0.c]
 Type=4
 [Units]
