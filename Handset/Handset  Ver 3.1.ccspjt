@@ -1,0 +1,27 @@
+[PROJECT]
+Target=Handset  Ver 3.1.hex
+Processor_Text=PIC18F47K42
+CCSVersion=5.107
+Compiler=PCH
+[Target Data]
+FileList=Handset  Ver 3.1.c
+[Handset  Ver 3.1.c]
+Type=4
+[mru-list]
+1=Handset  Ver 3.1.c
+
+[defines]
+buildcount=4
+
+[Opened Files]
+1=Handset  Ver 3.1.c
+t1=1
+2=Handset Main HaloLCD.c
+t2=1
+Count=2
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Handset  Ver 3.1 (main)

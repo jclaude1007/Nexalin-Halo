@@ -1,0 +1,10 @@
+Compiling C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1 on 24-Jul-23 at 09:17
+>>> Warning 225 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset Main HaloLCD.c" Line 7(17,63): Duplicate #define
+>>> Warning 203 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1.c" Line 338(1,1): Condition always TRUE
+>>> Warning 216 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1.c" Line 707(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_115200_130651_130652)
+>>> Warning 216 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1.c" Line 707(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MUL1616)
+>>> Warning 202 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1.c" Line 117(13,25): Variable never used:   g_NoActivity
+>>> Warning 202 "C:\Users\jclaude\Documents\GitHub\Nexalin-Halo\Handset\Handset  Ver 3.1.c" Line 321(17,22): Variable never used:   count
+      Memory usage:   ROM=23%      RAM=17% - 26%
+      0 Errors,  6 Warnings.
+Build Successful.
